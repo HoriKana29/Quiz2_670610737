@@ -1,53 +1,53 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Button, Stack, Title, Divider, Container } from "@mantine/core";
-import { v4 as uuidv4 } from "uuid";
-import AddExpenseModal from "../components/Modal";
+// import { v4 as uuidv4 } from "uuid";
+// import AddExpenseModal from "../components/Modal";
 
-type Expense = {
-  id: string;
-  name: string;
-  amount: number | string;
-  category: string;
-};
+// type Expense = {
+//   id: string;
+//   name: string;
+//   amount: number | string;
+//   category: string;
+// };
 
 export default function ExpenseTracker() {
-  const [opened, setOpened] = useState(false);
-  const [expenses, setExpenses] = useState<Expense[]>([]);
-  const categories = ["Food", "Transport", "Entertainment"];
+  // const [opened, setOpened] = useState(false);
+  // const [expenses, setExpenses] = useState<Expense[]>([]);
+  // const categories = ["Food", "Transport", "Entertainment"];
   
-    const addTask = (
-    name: string, amount: number | string, category: string
-  ) => {
-    const newTask: Expense = {
-      id: uuidv4(),
-      name,
-      amount,
-      category,
-    };
-    setExpenses((prev) => [...prev, newTask]);
-  };
+  //   const addTask = (
+  //   name: string, amount: number | string, category: string
+  // ) => {
+  //   const newTask: Expense = {
+  //     id: uuidv4(),
+  //     name,
+  //     amount,
+  //     category,
+  //   };
+  //   // setExpenses((prev) => [...prev, newTask]);
+  // };
 
-  const totalCard = () => {
-    let total = 0;
-    let minitotal = 0;
+  // const totalCard = () => {
+  //   let total = 0;
+  //   let minitotal = 0;
 
-    expenses[1]
+  //   expenses[1]
 
-    return total+minitotal;
-  };
+  //   return total+minitotal;
+  // };
 
   return (
     <Container style={{ maxWidth: 600, margin: "auto", padding: 20 }}>
       <Title order={2} mb="md">
         Expense Tracker
       </Title>
-      <Button onClick={() => setOpened(true)}>Add Expense Item</Button>
+      <Button>Add Expense Item</Button>
       {/* Type additional AddExpenseModal here. */}
-      <AddExpenseModal
+      {/* <AddExpenseModal
           opened={opened}
           onClose={() => setOpened(false)}
-          onAdd={addTask}
-        />
+          onAdd={expense}
+        /> */}
 
       <Divider my="md" />
       {/* Type additional total cost here. */}
