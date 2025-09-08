@@ -4,7 +4,7 @@ import {
   Badge,
   ActionIcon,
   Text,
-  // type GroupProps,
+  type GroupProps,
 } from "@mantine/core";
 import { IconTrash } from "@tabler/icons-react";
 
