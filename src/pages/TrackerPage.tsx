@@ -24,7 +24,7 @@ export default function ExpenseTracker() {
       amount,
       category,
     };
-    // setExpenses((prev) => [...prev, newTask]);
+    setExpenses((prev) => [...prev, newTask]);
   };
 
   const totalCard = () => {
@@ -41,13 +41,13 @@ export default function ExpenseTracker() {
       <Title order={2} mb="md">
         Expense Tracker
       </Title>
-      <Button>Add Expense Item</Button>
+      <Button onClick={() =>setOpened(true)}>Add Expense Item</Button>
       {/* Type additional AddExpenseModal here. */}
-      {/* <AddExpenseModal
+      <AddExpenseModal
           opened={opened}
           onClose={() => setOpened(false)}
-          onAdd={expense}
-        /> */}
+          onAdd={addTask}
+        />
 
       <Divider my="md" />
       {/* Type additional total cost here. */}
